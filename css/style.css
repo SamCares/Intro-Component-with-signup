@@ -109,11 +109,11 @@ i {
   position: absolute;
   top: 16px;
   right: 30px;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .error-icon {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .error-message {
@@ -126,9 +126,9 @@ i {
   /* margin-bottom: 0.5px; */
 }
 
-.error-message {
+/* .error-message {
   visibility: hidden;
-}
+} */
 
 .btn {
   background: linear-gradient(
