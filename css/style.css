@@ -127,7 +127,7 @@ i {
 }
 
 .error-icon {
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .error-message {
@@ -138,7 +138,7 @@ i {
   font-style: italic;
   position: relative;
   margin-top: 4rem;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .btn {
