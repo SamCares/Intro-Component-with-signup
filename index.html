@@ -24,56 +24,78 @@
     <div class="right_content">
       <p class="top"><b>Try it free 7 days then</b> $20/mo. thereafter</p>
 
-      <form action="#" method="GET" class="form">
+      <form action="POST" method="POST" class="form" id="form">
         <div class="form-control">
           <div class="input-error-icon">
-            <input type="text" placeholder="First Name" class="first-name" />
-            <i class="error-icon"
+            <input
+              type="text"
+              placeholder="First Name"
+              class="first-name"
+              id="first-name"
+            />
+            <i class="error-icon" id="error-icon"
               ><img src="images/icon-error.svg" alt="Error icon"
             /></i>
           </div>
-          <div class="error-message">
+          <div class="error-message" id="error-message">
             <small>First Name cannot be empty</small>
           </div>
         </div>
 
         <div class="form-control">
           <div class="input-error-icon">
-            <input type="text" placeholder="Last Name" class="last-name" />
-            <i class="error-icon"
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="last-name"
+              id="last-name"
+            />
+            <i class="error-icon" id="error-icon"
               ><img src="images/icon-error.svg" alt="Error icon"
             /></i>
           </div>
-          <div class="error-message">
+          <div class="error-message" id="error-message">
             <small>Last Name cannot be empty</small>
           </div>
         </div>
 
         <div class="form-control">
           <div class="input-error-icon">
-            <input type="text" placeholder="Email Address" class="email" />
-            <i class="error-icon"
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="email"
+              id="email"
+            />
+            <i class="error-icon" id="error-icon"
               ><img src="images/icon-error.svg" alt="Error icon"
             /></i>
           </div>
-          <div class="error-message">
+          <div class="error-message" id="error-message">
             <small>Looks like this is not an email</small>
           </div>
         </div>
 
         <div class="form-control">
           <div class="input-error-icon">
-            <input type="text" placeholder="Password" class="password" />
-            <i class="error-icon"
+            <input
+              type="password"
+              placeholder="Password"
+              class="password"
+              id="password"
+            />
+            <i class="error-icon" id="error-icon"
               ><img src="images/icon-error.svg" alt="Error icon"
             /></i>
           </div>
-          <div class="error-message">
+          <div class="error-message" id="error-message">
             <small>Password cannot be empty</small>
           </div>
         </div>
 
-        <button class="btn" type="submit">CLAIM YOUR FREE TRIAL</button>
+        <button class="btn" id="btn" type="submit">
+          CLAIM YOUR FREE TRIAL
+        </button>
         <p class="form_footer">
           By clicking the button, you are agreeing to our
           <span> <a href="#"> Terms and Services</a> </span>

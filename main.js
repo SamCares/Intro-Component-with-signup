@@ -1,10 +1,10 @@
-const form = document.querySelector('.form');
-const firstName = document.querySelector('.first-name');
-const lastName = document.querySelector('.last-name');
-const email = document.querySelector('.email');
-const password = document.querySelector('.password');
-const errorIcon = document.querySelectorAll('.error-icon');
-const errorMessage = document.querySelectorAll('.error-message');
+const form = document.getElementById('form');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const errorIcon = document.querySelectorAll('error-icon');
+const errorMessage = document.querySelectorAll('error-message');
 
 form.addEventListener('submit', (e) => {
     if (firstName === '') {
