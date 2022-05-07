@@ -1,19 +1,26 @@
 const form = document.getElementById('form');
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
+const firstName = document.getElementById('first_name');
+const lastName = document.getElementById('last_name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const errorIcon = document.querySelectorAll('error-icon');
-const errorMessage = document.querySelectorAll('error-message');
+const errorIcon = document.querySelectorAll('.error_icon');
+const errorMessage = document.querySelectorAll('.error_message');
+const input = document.querySelectorAll('.input');
 const button = document.getElementById('btn');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (firstName.value === '') {
-        console.log('error');
+        errorIcon.forEach(errorIcon => {
+            errorIcon.style.visibility = 'visible'
+        });
+        errorMessage.forEach(errorMessage => {
+            errorMessage.style.visibility = 'visible'
+        });
+        input.forEach(input => {
+            input.style.border = '2px solid hsl(0, 100%, 74%);'
+        });
     }
-
-    checkInputs();
 })
 
 
