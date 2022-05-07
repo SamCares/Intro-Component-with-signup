@@ -5,14 +5,17 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const errorIcon = document.querySelectorAll('error-icon');
 const errorMessage = document.querySelectorAll('error-message');
+const button = document.getElementById('btn');
 
 form.addEventListener('submit', (e) => {
-    if (firstName === '') {
-        errorMessage.style.visibility = "visible";
-    }
     e.preventDefault();
+    if (firstName.value === '') {
+        console.log('error');
+    }
 
+    checkInputs();
 })
+
 
 // const form = document.querySelector('.form');
 // const firstName = document.querySelector('first-name');
