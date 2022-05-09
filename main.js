@@ -10,7 +10,12 @@ const button = document.getElementById('btn');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (firstName.value === '') {
+
+    checkInputs();
+})
+
+function checkInputs() {
+    if (firstName.value === '' && lastName.value === '' && email.value === '' && password.value === '') {
         errorIcon.forEach(errorIcon => {
             errorIcon.style.visibility = 'visible'
         });
@@ -21,8 +26,8 @@ form.addEventListener('submit', (e) => {
             input.style.border = '2px solid hsl(0, 100%, 74%);'
         });
     }
-})
 
+}
 
 // const form = document.querySelector('.form');
 // const firstName = document.querySelector('first-name');
