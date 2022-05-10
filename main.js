@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
 })
 
 function checkInputs() {
-    if (firstName.value === '' && lastName.value === '' && email.value === '' && password.value === '') {
+    if (firstName.value === '' ) {
         errorIcon.forEach(errorIcon => {
             errorIcon.style.visibility = 'visible'
         });
