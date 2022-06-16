@@ -10,12 +10,11 @@ const button = document.getElementById('btn');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     checkInputs();
 })
 
 function checkInputs() {
-    if (firstName.value === '' ) {
+    if (firstName.value === '') {
         errorIcon.forEach(errorIcon => {
             errorIcon.style.visibility = 'visible'
         });
@@ -26,8 +25,8 @@ function checkInputs() {
             input.style.border = '2px solid hsl(0, 100%, 74%);'
         });
     }
-
 }
+
 
 // const form = document.querySelector('.form');
 // const firstName = document.querySelector('first-name');
