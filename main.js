@@ -3,29 +3,49 @@ const firstName = document.getElementById('first_name');
 const lastName = document.getElementById('last_name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const errorIcon = document.querySelectorAll('.error_icon');
-const errorMessage = document.querySelectorAll('.error_message');
-const input = document.querySelectorAll('.input');
-const button = document.getElementById('btn');
+const firstNameErrorIcon = document.querySelector('#first_name_error_icon');
+const firstNameErrorMessage = document.querySelector('#first_name_error_message');
+const lastNameErrorIcon = document.querySelector('#last_name_error_icon');
+const lastNameErrorMessage = document.querySelector('#last_name_error_message');
+const emailErrorIcon = document.querySelector('#email_error_icon');
+const emailErrorMessage = document.querySelector('#email_error_message');
+const passwordErrorIcon = document.querySelector('#password_error_icon');
+const passwordErrorMessage = document.querySelector('#email_error_message');
+// const errorIcon = document.querySelectorAll('.error_icon');
+// const errorMessage = document.querySelectorAll('.error_message');
+// const input = document.querySelectorAll('.input');
+// const button = document.getElementById('btn');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInputs();
-})
+});
 
 function checkInputs() {
     if (firstName.value === '') {
-        errorIcon.forEach(errorIcon => {
-            errorIcon.style.visibility = 'visible'
-        });
-        errorMessage.forEach(errorMessage => {
-            errorMessage.style.visibility = 'visible'
-        });
-        input.forEach(input => {
-            input.style.border = '2px solid hsl(0, 100%, 74%);'
-        });
+        firstNameErrorIcon.style.visibility = 'visible';
+        firstNameErrorMessage.style.visibility = 'visible';
+        // inputErrorFirst.style.border = '2px solid hsl(0, 100%, 74%)';
     }
 }
+
+
+
+
+
+// function checkInputs() {
+//     if (firstName.value === '') {
+//         errorIcon.forEach(errorIcon => {
+//             errorIcon.style.visibility = 'visible'
+//         });
+//         errorMessage.forEach(errorMessage => {
+//             errorMessage.style.visibility = 'visible'
+//         });
+//         input.forEach(input => {
+//             input.style. = '2px solid hsl(0, 100%, 74%)'
+//         });
+//     }
+// }
 
 
 // const form = document.querySelector('.form');
