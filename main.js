@@ -27,6 +27,11 @@ function checkInputs() {
         firstNameErrorMessage.style.visibility = 'visible';
         // inputErrorFirst.style.border = '2px solid hsl(0, 100%, 74%)';
     }
+
+    if (lastName.value === '') {
+        lastNameErrorIcon.style.visibility = 'visible';
+        lastNameErrorMessage.style.visibility = 'visible';
+    }
 }
 
 
