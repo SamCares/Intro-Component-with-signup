@@ -3,18 +3,6 @@ const firstName = document.getElementById('first_name');
 const lastName = document.getElementById('last_name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const firstNameErrorIcon = document.querySelector('#first_name_error_icon');
-const firstNameErrorMessage = document.querySelector('#first_name_error_message');
-const lastNameErrorIcon = document.querySelector('#last_name_error_icon');
-const lastNameErrorMessage = document.querySelector('#last_name_error_message');
-const emailErrorIcon = document.querySelector('#email_error_icon');
-const emailErrorMessage = document.querySelector('#email_error_message');
-const passwordErrorIcon = document.querySelector('#password_error_icon');
-const passwordErrorMessage = document.querySelector('#email_error_message');
-// const errorIcon = document.querySelectorAll('.error_icon');
-// const errorMessage = document.querySelectorAll('.error_message');
-// const input = document.querySelectorAll('.input');
-// const button = document.getElementById('btn');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -22,16 +10,41 @@ form.addEventListener('submit', (e) => {
 });
 
 function checkInputs() {
-    if (firstName.value === '') {
+    const firstNameErrorIcon = document.querySelector('#first_name_error_icon');
+    const firstNameErrorMessage = document.querySelector('#first_name_error_message');
+    if (firstName.value.trim() === '') {
         firstNameErrorIcon.style.visibility = 'visible';
         firstNameErrorMessage.style.visibility = 'visible';
-        // inputErrorFirst.style.border = '2px solid hsl(0, 100%, 74%)';
+        // input.style.border = '2px solid hsl(0, 100%, 74%)';
     }
 
-    if (lastName.value === '') {
+    const lastNameErrorIcon = document.querySelector('#last_name_error_icon');
+    const lastNameErrorMessage = document.querySelector('#last_name_error_message');
+    if (lastName.value.trim() === '') {
         lastNameErrorIcon.style.visibility = 'visible';
         lastNameErrorMessage.style.visibility = 'visible';
     }
+
+    const emailErrorIcon = document.querySelector('#email_error_icon');
+    const emailErrorMessage = document.querySelector('#email_error_message');
+    if (email.value.trim() === '') {
+        emailErrorIcon.style.visibility = 'visible';
+        emailErrorMessage.style.visibility = 'visible';
+    } else if (!emailValid(email.value)) {
+        emailErrorMessage.textContent = `Looks like this is not an email`;
+    }
+
+    const passwordErrorIcon = document.querySelector('#password_error_icon');
+    const passwordErrorMessage = document.querySelector('#password_error_message');
+    if (password.value.trim() === '') {
+        passwordErrorIcon.style.visibility = 'visible';
+        passwordErrorMessage.style.visibility = 'visible';
+    }
+    return;
+}
+
+function emailValid(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 
