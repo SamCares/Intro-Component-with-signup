@@ -32,6 +32,7 @@
               placeholder="First Name"
               class="first_name"
               id="first_name"
+              autocomplete="off"
             />
             <i class="error_icon" id="first_name_error_icon"
               ><img src="images/icon-error.svg" alt="Error icon"
@@ -49,6 +50,7 @@
               placeholder="Last Name"
               class="last_name"
               id="last_name"
+              autocomplete="off"
             />
             <i class="error_icon" id="last_name_error_icon"
               ><img src="images/icon-error.svg" alt="Error icon"
@@ -62,17 +64,18 @@
         <div class="form_control">
           <div class="input_error_icon">
             <input
-              type="text"
+              type=""
               placeholder="Email Address"
               class="email"
               id="email"
+              autocomplete="off"
             />
             <i class="error_icon" id="email_error_icon"
               ><img src="images/icon-error.svg" alt="Error icon"
             /></i>
           </div>
           <div class="error_message" id="email_error_message">
-            <small>Email cannot be empty</small>
+            <small id="text_swap">Email cannot be empty</small>
           </div>
         </div>
 
@@ -83,6 +86,7 @@
               placeholder="Password"
               class="password"
               id="password"
+              autocomplete="off"
             />
             <i class="error_icon" id="password_error_icon"
               ><img src="images/icon-error.svg" alt="Error icon"
@@ -111,6 +115,6 @@
       </p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
