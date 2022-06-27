@@ -59,7 +59,6 @@ function inputErrorBorder() {
     const inputErrorBorder = document.querySelectorAll('input');
     inputErrorBorder.forEach(inputErrorBorder => {
         inputErrorBorder.style.border = '2px solid hsl(0, 100%, 74%)';
-
     });
 }
 
