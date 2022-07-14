@@ -96,7 +96,7 @@ input:focus {
   outline: none;
 }
 
-.form_control.error_icon input {
+/* .form_control.error_icon input {
   border: 2px solid hsl(0, 100%, 74%);
 }
 
@@ -106,34 +106,41 @@ input:focus {
 
 .input_error_icon {
   position: relative;
-}
+} */
 
 input,
 i {
-  position: absolute;
-  top: 0;
-  right: 0;
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
 }
 
-i {
-  font-size: 24px;
-  top: 16px;
-  right: 30px;
-}
-
-.error_icon {
+.form_input.error_icon {
+  border: 2px solid hsl(0, 100%, 74%);
+  box-shadow: unset;
   visibility: hidden;
+  position: relative;
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
 }
 
 .error_message {
-  width: 100%;
   text-align: right;
-  font-size: 12px;
+  font-size: 0.7rem;
   color: hsl(0, 100%, 74%);
   font-style: italic;
-  position: relative;
-  margin-top: 4rem;
+  font-weight: 500;
+  display: none;
+  margin-top: 5px;
+  opacity: 0;
   visibility: hidden;
+}
+
+input.error_icon ~ input.error_message {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .btn {
