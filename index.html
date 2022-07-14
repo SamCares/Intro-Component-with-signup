@@ -26,75 +26,49 @@
 
       <form action="index.html" method="GET" class="form" id="form">
         <div class="form_control">
-          <div class="input_error_icon">
-            <input
-              type="text"
-              placeholder="First Name"
-              class="first_name"
-              id="first_name"
-              autocomplete="off"
-            />
-            <i class="error_icon" id="first_name_error_icon"
-              ><img src="images/icon-error.svg" alt="Error icon"
-            /></i>
-          </div>
-          <div class="error_message" id="first_name_error_message">
-            <small>First Name cannot be empty</small>
-          </div>
+          <input
+            type="text"
+            placeholder="First Name"
+            class="first_name form_input"
+            id="first_name"
+            autocomplete="off"
+          />
+          <span class="error_message"> First Name cannot be empty </span>
         </div>
 
         <div class="form_control">
-          <div class="input_error_icon">
-            <input
-              type="text"
-              placeholder="Last Name"
-              class="last_name"
-              id="last_name"
-              autocomplete="off"
-            />
-            <i class="error_icon" id="last_name_error_icon"
-              ><img src="images/icon-error.svg" alt="Error icon"
-            /></i>
-          </div>
-          <div class="error_message" id="last_name_error_message">
-            <small>Last Name cannot be empty</small>
-          </div>
+          <input
+            type="text"
+            placeholder="Last Name"
+            class="last_name"
+            id="last_name"
+            autocomplete="off"
+          />
+          <span class="error_message"> Last Name cannot be empty </span>
         </div>
 
         <div class="form_control">
-          <div class="input_error_icon">
-            <input
-              type=""
-              placeholder="Email Address"
-              class="email"
-              id="email"
-              autocomplete="off"
-            />
-            <i class="error_icon" id="email_error_icon"
-              ><img src="images/icon-error.svg" alt="Error icon"
-            /></i>
-          </div>
-          <div class="error_message" id="email_error_message">
-            <small id="text_swap">Email cannot be empty</small>
-          </div>
+          <input
+            type=""
+            placeholder="Email Address"
+            class="email"
+            id="email"
+            autocomplete="off"
+          />
+          <span class="error_message" id="email_error_message">
+            Email cannot be empty
+          </span>
         </div>
 
         <div class="form_control">
-          <div class="input_error_icon">
-            <input
-              type="password"
-              placeholder="Password"
-              class="password"
-              id="password"
-              autocomplete="off"
-            />
-            <i class="error_icon" id="password_error_icon"
-              ><img src="images/icon-error.svg" alt="Error icon"
-            /></i>
-          </div>
-          <div class="error_message" id="password_error_message">
-            <small>Password cannot be empty</small>
-          </div>
+          <input
+            type="password"
+            placeholder="Password"
+            class="password"
+            id="password"
+            autocomplete="off"
+          />
+          <span class="error_message"> Password cannot be empty </span>
         </div>
 
         <button class="btn" id="btn" type="submit">
