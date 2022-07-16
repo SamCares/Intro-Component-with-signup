@@ -11,13 +11,35 @@ form.addEventListener('submit', (e) => {
 
     if (form['first_name'].value.trim() === '') {
         form['first_name'].classList.add('error_icon');
-        // form['first_name'].classlist.add('error_message');
         error = true;
     } else {
-        // form['first_name'].classList.remove('error_icon');
-        // form['first_name'].classlist.remove('error_message');
+        form['first_name'].classList.remove('error_icon');
     }
 
+    if (form['last_name'].value.trim() === '') {
+        form['last_name'].classList.add('error_icon');
+        error = true;
+    } else {
+        form['last_name'].classList.remove('error_icon');
+    }
+
+    if (form['email'].value.trim() === '') {
+        form['email'].classList.add('error_icon');
+        error = true;
+    } else if (!emailValid(form['email'].value)) {
+        form['email'].classList.add('error_icon');
+        form['email'].innerText = 'Looks like this is not an email';
+        error = true;
+    } else {
+        form['email'].classList.remove('error_icon');
+    }
+
+    if (form['password'].value.trim() === '') {
+        form['password'].classList.add('error_icon');
+        error = true;
+    } else {
+        form['password'].classList.remove('error_icon');
+    }
     // function checkInputs() {
     // const firstNameErrorIcon = document.querySelector('#first_name_error_icon');
     // const firstNameErrorMessage = document.querySelector('#first_name_error_message');
