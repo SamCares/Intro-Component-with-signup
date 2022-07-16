@@ -96,26 +96,7 @@ input:focus {
   outline: none;
 }
 
-/* .form_control.error_icon input {
-  border: 2px solid hsl(0, 100%, 74%);
-}
-
-.form_control.error_icon input:focus {
-  box-shadow: unset;
-}
-
-.input_error_icon {
-  position: relative;
-} */
-
-input,
-i {
-  /* position: absolute; */
-  /* top: 0; */
-  /* right: 0; */
-}
-
-.form_input.error_icon {
+input.error_icon {
   border: 2px solid hsl(0, 100%, 74%);
   box-shadow: unset;
   visibility: hidden;
@@ -125,7 +106,7 @@ i {
   background-position: 95%;
 }
 
-.error_message {
+span.error_message {
   text-align: right;
   font-size: 0.7rem;
   color: hsl(0, 100%, 74%);
@@ -137,7 +118,8 @@ i {
   visibility: hidden;
 }
 
-input.error_icon ~ input.error_message {
+.error_icon,
+.error_message {
   display: block;
   visibility: visible;
   opacity: 1;
