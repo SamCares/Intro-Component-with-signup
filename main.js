@@ -27,8 +27,9 @@ form.addEventListener('submit', (e) => {
         form['email'].classList.add('error_icon');
         error = true;
     } else if (!emailValid(form['email'].value)) {
+        let text_swap = document.getElementById('text_swap');
         form['email'].classList.add('error_icon');
-        form['email'].innerText = 'Looks like this is not an email';
+        // text_swap.innerText = 'Looks like this is not an email';
         error = true;
     } else {
         form['email'].classList.remove('error_icon');
@@ -40,52 +41,7 @@ form.addEventListener('submit', (e) => {
     } else {
         form['password'].classList.remove('error_icon');
     }
-    // function checkInputs() {
-    // const firstNameErrorIcon = document.querySelector('#first_name_error_icon');
-    // const firstNameErrorMessage = document.querySelector('#first_name_error_message');
-    // if (form['first_name'].value.trim() === '') {
-    //     firstNameErrorIcon.style.visibility = 'visible';
-    //     firstNameErrorMessage.style.visibility = 'visible';
-    //     inputErrorBorder();
-    //     error = true;
-    // }
 
-    // const lastNameErrorIcon = document.querySelector('#last_name_error_icon');
-    // const lastNameErrorMessage = document.querySelector('#last_name_error_message');
-    // if (form['last_name'].value.trim() === '') {
-    //     lastNameErrorIcon.style.visibility = 'visible';
-    //     lastNameErrorMessage.style.visibility = 'visible';
-    //     inputErrorBorder();
-    //     error = true;
-    // }
-
-    // const emailErrorIcon = document.querySelector('#email_error_icon');
-    // const emailErrorMessage = document.querySelector('#email_error_message');
-    // const textSwap = document.querySelector('#text_swap');
-    // if (form['email'].value.trim() === '') {
-    //     emailErrorIcon.style.visibility = 'visible';
-    //     emailErrorMessage.style.visibility = 'visible';
-    //     inputErrorBorder();
-    //     error = true;
-    // } else if (!emailValid(form['email'].value)) {
-    //     emailErrorIcon.style.visibility = 'visible';
-    //     emailErrorMessage.style.visibility = 'visible';
-    //     textSwap.innerText = 'Looks like this is not an email';
-    //     inputErrorBorder();
-    //     error = true;
-    // }
-
-    // const passwordErrorIcon = document.querySelector('#password_error_icon');
-    // const passwordErrorMessage = document.querySelector('#password_error_message');
-    // if (form['password'].value.trim() === '') {
-    //     passwordErrorIcon.style.visibility = 'visible';
-    //     passwordErrorMessage.style.visibility = 'visible';
-    //     inputErrorBorder();
-    //     error = true;
-    // }
-
-    // // }
-    // // checkInputs();
     if (!error) {
         form.submit();
     }
