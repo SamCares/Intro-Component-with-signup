@@ -96,17 +96,16 @@ input:focus {
   outline: none;
 }
 
-input.error_icon {
+.form_input.error_icon {
   border: 2px solid hsl(0, 100%, 74%);
   box-shadow: unset;
-  visibility: hidden;
   position: relative;
   background-image: url(../images/icon-error.svg);
   background-repeat: no-repeat;
   background-position: 95%;
 }
 
-span.error_message {
+.error_message {
   text-align: right;
   font-size: 0.7rem;
   color: hsl(0, 100%, 74%);
@@ -118,8 +117,7 @@ span.error_message {
   visibility: hidden;
 }
 
-.error_icon,
-.error_message {
+.form_input.error_icon ~ .error_message {
   display: block;
   visibility: visible;
   opacity: 1;
